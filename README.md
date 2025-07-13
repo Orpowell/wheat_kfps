@@ -6,6 +6,10 @@ The code in this repository is to support reproducibility. It is not designed as
 
 The HMM-Annotator and Tea-tools which are also described in this paper can be found [here]() and [here]().
 
+## Requirements
+
+See requirements.txt for all libraries used for analysis. 
+
 ## Content
 
 ### HMM_refinement
