@@ -1,4 +1,4 @@
-# Analysis of Kinase Fusion Proteins
+# Analysis of Kinase Fusion Proteins in Hexaploid Wheat
 
 This repository is a collection of source code that supported the analyses of the KFPs in hexaploid wheat.
 
