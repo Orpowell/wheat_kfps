@@ -18,7 +18,7 @@ Scripts were used to generate Figure 1A and Figure S1.
 
 Methods for the analysis of the Chinese Spring Proteome. 
 
-Scripts were used to generate: Figure 1B-C, Figure S2-5, Table S2-6
+Scripts were used to generate: Figure 1B-C, Figure S2-5, Table S2-7
 
 ### monocot_analysis
 
