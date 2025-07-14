@@ -4,7 +4,7 @@ This repository is a collection of source code that supported the analyses of th
 
 The code in this repository is to support reproducibility. It is not designed as stand-alone applications.
 
-The HMM-Annotator and Tea-tools which are also described in this paper can be found [here]() and [here]().
+The HMM-Annotator and Tea-tools which are also described in this paper can be found [here](https://github.com/Orpowell/HMM-Annotator) and [here](https://github.com/Orpowell/tea-tools).
 
 ## Requirements
 
