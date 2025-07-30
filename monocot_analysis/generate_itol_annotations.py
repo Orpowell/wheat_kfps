@@ -12,8 +12,7 @@ species_data = "/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot
 annotation_dir = "/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/analysis/annotations"
 
 output_beta_finger_presence="/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/analysis/monocot_beta_finger_presence.itol"
-output_poaceae_label="/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/analysis/poaceae.itol"
-output_species_labels="/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/analysis/monocot_species_labels.itol"
+output_beta_finger_table="/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/analysis/monocot_beta_finger_presence.tsv"
 
 species_beta_finger_count = dict()
 
@@ -44,44 +43,16 @@ with open(output_beta_finger_presence, "w+") as output:
     output.write("DATASET_BINARY\n")
     output.write("SEPARATOR COMMA\n")
     output.write("DATASET_LABEL,Beta-finger Presence\n")
-    output.write("FIELD_SHAPES,1\n")
-    output.write("FIELD_LABELS,f1\n")
-
+    output.write("FIELD_SHAPES,2\n")
+    output.write("FIELD_LABELS,beta_finger_presence\n")
+    output.write("FIELD_COLORS,#000000\n")
     output.write("DATA\n")
     
     for k,v in tree2beta_finger.items():
-    	output.write(f"{k},{v}\n")
+    	if v:
+    		output.write(f"{k},{v}\n")
 
-with open(output_poaceae_label, "w+") as output:
-    output.write("DATASET_RANGE\n")
-    output.write("SEPARATOR COMMA\n")
-    output.write("DATASET_LABEL,Poaceae\n")
-    output.write("FIELD_SHAPES,1\n")
-    output.write("FIELD_LABELS,f1\n")
-    output.write("LABEL_OUTLINE_WIDTH,1\n")
-    output.write("LABEL_OUTLINE_COLOR,#000000\n")
-    output.write("RANGE_COVER,clade\n")
-    output.write("COVER_DATASETS,1\n")
-    output.write("COVER_LABELS,1\n")
-
-    output.write("DATA\n")
-    output.write("Aegilops bicornis - 4483,Streptochaeta angustifolia - 38733,#ffe4c4")
-
-
-text_info = "-1,#000000,italic,2,0"
-
-with open(output_species_labels, "w+") as output:
-    output.write("DATASET_TEXT\n")
-    output.write("SEPARATOR COMMA\n")
-    output.write("DATASET_LABEL,Monocots\n")
-
-    output.write("DATA\n")
-    
-    for k,v in tree2beta_finger.items():
-    	output.write(f"{k},{k.split('-')[0][:-1]},{text_info}\n")
-
-
-
+species_df.to_csv(output_beta_finger_table, sep="\t", columns=["species", "taxid", "genome", 'bf_bool'], index=None)
 
 
 

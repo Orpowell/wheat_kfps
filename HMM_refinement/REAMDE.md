@@ -14,6 +14,10 @@ Generate an AlphaFold3 submission json for each KFP sequence.
 
 Extract beta-finger sequences based on coordinates provided.
 
+### assess_structure_quality.sh
+
+Assess the quality of AlphaFold3 predictions of KFPs using AlphaFold-Analyser.
+
 ### beta_finger_hmm_auto_refiner.sh 
 
 Iteratively refine a seed HMM on the proteome of Chinese Spring.
@@ -25,3 +29,5 @@ Plot iterative refinement of seed HMM. (Fig. S1.)
 ### plot_sequence_logo.py 
 
 Plot sequence logo of HMM sequence from skylign matrix. (Fig. 1A)
+
+

@@ -87,14 +87,13 @@ axs.spines[["right", "top"]].set_visible(False)
 axs.set_xlabel("Distance to Nearest CC-NLR (bp)")
 axs.set_xlim(3,9)
 axs.set_ylim(0,1)
-axs.set_ylabel("# of KFPs")
+axs.set_ylabel("Proportion of KFPs")
 sns.ecdfplot(np.log10(CS_KFPs['nlr_distance']), color='black')
 
 xlabels = [3,4,5,6,7,8,9]
 nu_xlabels = [f"10$^{int(x)}$" for x in xlabels]
 axs.set_xticks(xlabels, nu_xlabels)
 plt.savefig(output_graph)
-
 
 print(f"{stats.percentileofscore(a=CS_KFPs['nlr_distance'], score=150000)=}")
 print(f"{stats.percentileofscore(a=CS_KFPs['nlr_distance'], score=200000)=}")

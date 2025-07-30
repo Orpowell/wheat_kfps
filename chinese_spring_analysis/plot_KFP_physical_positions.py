@@ -86,13 +86,13 @@ for n, data in enumerate(kfp_loci.groupby(by=[0])):
 	ax.broken_barh(xranges=data[1].plot_data, yrange=(n-0.375, 0.75), color="red")
 
 
-"""
+
 # Figure Legend
 legend_elements = [Patch(facecolor='red', edgecolor='black', label='KFP loci'),
 					Patch(facecolor='purple', edgecolor='black', label='Centromere')]
 
-ax.legend(handles=legend_elements, loc=0)
-"""
+ax.legend(handles=legend_elements, fontsize='small')
+
 
 # Axis settings
 

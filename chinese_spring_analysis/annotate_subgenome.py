@@ -23,12 +23,12 @@ with open(KFP_positions) as file:
 # Generate data for cloned kfps
 
 with open(cloned_kfps) as file:
-	cloned_colour = {line.split(",")[1].strip() : "#000000" for line in file}
+	cloned_colour = {line.split(",")[1].strip() : "#000000" for line in file if line.startswith("Genebank") == False}
 		
 
 print(cloned_colour)
 
-subgenome_colour = {'A': "#7BB662", 'B': "#FBB149", 'D': "#994FB2"}
+subgenome_colour = {'A': "#CCBB44", 'B': "#4477AA", 'D': "#66CCEE"}
 
 with open(output_annotation, "w+") as out:
 	

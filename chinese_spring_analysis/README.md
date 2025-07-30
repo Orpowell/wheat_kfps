@@ -50,4 +50,11 @@ Count extened beta-finger kinase domains associated with each KFP and generate a
 
 Find and plot the proximal CC-NLR to each KFP in chinese spring. (Table S7, Supplementary Fig. 5)
 
+### generate_PIM.sh
+
+Generate a percentage identity matrix from a multiple sequence alignment (Supplementary Fig. XX).
+
+### Analyse_PIM.py
+
+Plot cluster maps of MSP and Kinase KFPs. (Supplementary Fig. XX and YY)
 
