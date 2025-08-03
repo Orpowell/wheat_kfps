@@ -24,8 +24,8 @@ Annotate all genomes using HMM annotator.
 
 ### generate_itol_annotations.py
 
-Generate annotation file of beta-finger presence for iTOL. (Fig. 2)
+Generate annotation file of beta-finger presence for iTOL. (Fig. 2).
 
 ### generate_family_annotations.py
 
-Generate annotation of monocot families for iTOL. (Fig 2.)
+Generate annotation of monocot families for iTOL. (Fig 2. and Table S11).

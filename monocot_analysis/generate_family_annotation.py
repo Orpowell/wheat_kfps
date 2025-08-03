@@ -21,9 +21,28 @@ print(len(families))
 
 annotated_species = species_of_interest[species_of_interest['Family name'].isin(families.keys())]
 
-colours = ["#2e8b57","#7f0000","#808000","#000080","#ff0000","#ff8c00","#ffd700","#c71585","#00fa9a","#4169e1","#00ffff","#00bfff","#0000ff","#adff2f","#ff00ff","#f0e68c","#dda0dd","#ffa07a"]
+colours = [
+    "#3cb44b",
+    "#ffe119",
+    "#4363d8",
+    "#f58231",
+    "#e6194b",
+    "#911eb4",
+    "#46f0f0",
+    "#f032e6",
+    "#bcf60c",
+    "#fabebe",
+    "#008080",
+    "#e6beff",
+    "#9a6324",
+    "#fffac8",
+    "#800000",
+    "#aaffc3",
+    "#ffd8b1",
+    "#000075",
+]
 
-colour_dict = dict(zip(annotated_species['Family name'].unique(), colours))
+colour_dict = dict(zip(annotated_species['Family name'].unique(), colours2))
 
 species_of_interest['node_id'] = species_of_interest.apply(lambda x: f"{x['Tax name']} - {x['Taxid']}" , axis=1)
 

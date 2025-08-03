@@ -24,10 +24,10 @@ Iteratively refine a seed HMM on the proteome of Chinese Spring.
 
 ### plot_refinement.py  
 
-Plot iterative refinement of seed HMM. (Fig. S1.)
+Plot iterative refinement of seed HMM. (Fig. S21).
 
 ### plot_sequence_logo.py 
 
-Plot sequence logo of HMM sequence from skylign matrix. (Fig. 1A)
+Plot sequence logo of HMM sequence from skylign matrix. (Fig. 1B)
 
 
