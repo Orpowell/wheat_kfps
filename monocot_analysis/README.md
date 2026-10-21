@@ -12,11 +12,7 @@ Download all available moncot reference genomes.
 
 ### get_species_name.py
 
-Extract names of species of each downloaded genome assembly.
-
-### create_monocot_tree.sh
-
-Download a phylogenetic tree of monocot species.
+Extract names of species of each downloaded genome assembly. (Table S3)
 
 ### annotate_genomes.sh
 
@@ -24,8 +20,8 @@ Annotate all genomes using HMM annotator.
 
 ### generate_itol_annotations.py
 
-Generate annotation file of beta-finger presence for iTOL. (Fig. 2).
+Generate annotation file of beta-finger presence for iTOL. (Fig. S22).
 
 ### generate_family_annotations.py
 
-Generate annotation of monocot families for iTOL. (Fig 2. and Table S11).
+Generate annotation of monocot families for iTOL. (Fig S22. and Table S4).

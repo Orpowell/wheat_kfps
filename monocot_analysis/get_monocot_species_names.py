@@ -1,8 +1,8 @@
 import pandas as pd
 
-monocot_jsonl_path = "/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/data/monocot_assemblies.jsonl"
-s_angustfolia_jsonl_path = "/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/data/s_angustfolia.jsonl"
-output_table = "/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/analysis/monocot_genome_species.tsv"
+monocot_jsonl_path = "/jic/scratch/groups/Paul-Nicholson/ollie/rmg2/data/monocot_origin/genomes/monocot_4447_reference_genomes/ncbi_dataset/data/assembly_data_report.jsonl"
+s_angustfolia_jsonl_path = "/jic/scratch/groups/Paul-Nicholson/ollie/rmg2/data/monocot_origin/genomes/s_angustfolia/ncbi_dataset/data/assembly_data_report.jsonl"
+output_table = "/jic/scratch/groups/Paul-Nicholson/ollie/rmg2/analysis/monocot_origin/monocot_genome_species.tsv"
 
 def load_species_data(jsonl_path: str) -> pd.DataFrame:
 	

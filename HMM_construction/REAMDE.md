@@ -12,11 +12,19 @@ Generate an AlphaFold3 submission json for each KFP sequence.
 
 ### extract_KFP_beta_fingers.py 
 
-Extract beta-finger sequences based on coordinates provided.
+Extract beta-finger sequences based on coordinates provided (See Table S2).
+
+### build_seed_hmm.sh
+
+Build Seed HMM from the beta-finger sequences of cloned KFPs.
 
 ### assess_structure_quality.sh
 
 Assess the quality of AlphaFold3 predictions of KFPs using AlphaFold-Analyser.
+
+### download_monocot_proteomes.sh
+
+Download all available monocot proteomes from NCBI.
 
 ### beta_finger_hmm_auto_refiner.sh 
 

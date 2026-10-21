@@ -1,9 +1,9 @@
 import pandas as pd
 
-taxa_data = "/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/data/moncot_tax_id.tsv"
-monocot_species = "/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/analysis/monocot_genome_species.tsv"
-family_annotation_output = "/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/analysis/monocot_families.itol"
-monocot_table_output = "/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/monocot_KFP_presence/analysis/monocot_presence.tsv"
+taxa_data = "/jic/scratch/groups/Paul-Nicholson/ollie/rmg2/analysis/monocot_origin/moncot_tax_id.tsv"
+monocot_species = "/jic/scratch/groups/Paul-Nicholson/ollie/rmg2/analysis/monocot_origin/monocot_genome_species.tsv"
+family_annotation_output = "/jic/scratch/groups/Paul-Nicholson/ollie/rmg2/analysis/monocot_origin/monocot_families.itol"
+monocot_table_output = "/jic/scratch/groups/Paul-Nicholson/ollie/rmg2/analysis/monocot_origin/monocot_presence.tsv"
 
 taxa_df = pd.read_csv(taxa_data, sep="\t")
 monocot_df = pd.read_csv(monocot_species, sep="\t", header=None)
@@ -14,7 +14,7 @@ species_of_interest = taxa_df[taxa_df.Taxid.isin(taxa_id)]
 
 family_values = species_of_interest['Family name'].value_counts()
 
-min_count = 3
+min_count = 10 
 
 families = {k: v for k,v in family_values.items() if v >= min_count}
 print(len(families))
@@ -42,13 +42,13 @@ colours = [
     "#000075",
 ]
 
-colour_dict = dict(zip(annotated_species['Family name'].unique(), colours2))
+colour_dict = dict(zip(annotated_species['Family name'].unique(), colours))
 
 species_of_interest['node_id'] = species_of_interest.apply(lambda x: f"{x['Tax name']} - {x['Taxid']}" , axis=1)
 
 species_of_interest['family_colour'] = species_of_interest['Family name'].map(colour_dict).fillna("#ffffff")
 
-annotation_dict = dict(zip(species_of_interest.node_id, species_of_interest.family_colour))
+annotation_dict = dict(zip(species_of_interest['Tax name'], species_of_interest.family_colour))
 
 for k,v in colour_dict.items():
 	print(k, v)
@@ -68,6 +68,6 @@ with open(family_annotation_output, "w+") as out:
     out.write("DATA\n")
     
     for k,v in annotation_dict.items():
-    	out.write(f"{k},{v}\n")
+    	out.write(f"'{k}',{v}\n")
 
 species_of_interest.to_csv(monocot_table_output, sep="\t", columns=['Tax name', 'Taxid', 'Family name'], index=None)

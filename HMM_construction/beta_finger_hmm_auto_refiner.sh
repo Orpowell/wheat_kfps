@@ -1,9 +1,8 @@
 #!/bin/bash
 
-
-current_hmm_profile="/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/beta_finger_HMM/analysis/beta_finger_seed_HMM/seed_beta_finger.hmm"
-sequence_db="/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/beta_finger_HMM/data/T2T_chinese_spring/ncbi_dataset/data/GCA_040256815.2/protein.faa"
-workdir="/Users/powellor/Desktop/kfp_annotation/KFP_annotation_v2/beta_finger_HMM/analysis/beta_finger_HMM_refinement/refinement"
+current_hmm_profile="seed_beta_finger.hmm"
+sequence_db="monocot_proteome.faa"
+workdir="workdir"
 
 rm -r $workdir
 
